@@ -80,7 +80,7 @@ export class OrderComponent implements OnInit {
     this.customerOrderArray.push({'customerDetails': this.customerDetails})
 
 
-  if (this.customerOrderArray.length === 3){
+    if (this.customerOrderArray.length === 3) {
   // make an post observable call to backend with customerOrderArray to store the details in the DB.
   // Not using static JSON , sample post call below
   // this.http.post('...url', customerOrderArray)

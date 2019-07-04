@@ -172,7 +172,7 @@ export class OrderManagementComponent implements OnInit {
   }
 
   updateItemList(completed: number, pending: number, cancelled: number): void{
-    this.itemStatusList.map(function(item) {
+    this.itemStatusList.map(item => {
         item.value = (arguments[item.index] / this.gridOptions.rowData.length) * 100;
     });
   }
