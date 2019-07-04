@@ -1,0 +1,58 @@
+<div class="container" id="dashboard__top">
+  <div class="row border-bottom">
+    <div id="delivery__status" class="col-md-12 col-lg-6">
+      <h3>DELIVERY STATUS</h3>
+      <h5>Total Orders</h5>
+      <h4>150</h4>
+      <div class="flex-container">
+        <div>
+          <circle-progress [percent]="75" [radius]="75" [toFixed]='0' [outerStrokeGradient]='false'
+            [outerStrokeWidth]='14' [backgroundStroke]="'#000000'" [outerStrokeColor]="'#27cebb'"
+            [outerStrokeGradientStopColor]="'#27cebb'" [innerStrokeColor]="'#e8e8e8'" [innerStrokeWidth]='7'
+            [animation]="true" [animationDuration]="300" [showBackground]='false' [showUnits]='false' [space]='-10'>
+          </circle-progress>
+        </div>
+        <div>
+          <circle-progress [percent]="75" [radius]="75" [toFixed]='0' [outerStrokeGradient]='true' [outerStrokeWidth]='14'
+            [backgroundStroke]="'#000000'" [outerStrokeColor]="'#ff5660'" [outerStrokeGradientStopColor]="'#ff5660'"
+            [innerStrokeColor]="'#e8e8e8'" [innerStrokeWidth]='7' [animation]="true" [animationDuration]="300"
+            [showBackground]='false' [showUnits]='false' [space]='-10'></circle-progress>
+        </div>
+      </div>
+
+    </div>
+    <div id="total__sales" class="col-md-12 col-lg-6">
+      <h3>TOTAL SALES</h3>
+      <h5>USD</h5>
+      <h3>15,000</h3>
+    </div>
+  </div>
+
+  <div class="row border-bottom">
+    <div id="dashboard__bottom" class="col-md-12">
+      <div class="row">
+        <div class="col-6">Placeholder for Graph</div>
+        <div class="col-6">
+            <div class="row  marginTopBottom32" id="status_delivery">
+                <div class="col-12">Reports</div>
+                <div class="col-6">
+                  <label>On-time Delivery</label>
+                  <h3>29.7%</h3>
+                  <app-status-bar [statusList]="onTimeDeliveryStatus"></app-status-bar>
+                </div>
+                <div class="col-6">
+                  <label>Late Delivery</label>
+                  <h3>53.4%</h3>
+                  <app-status-bar [statusList]="lateDeliveryStatus"></app-status-bar>
+                </div>
+                <div class="col-12 marginTopBottom32">
+                  <label>Performance</label>
+                  <h4>0.05%</h4>
+                </div>
+              </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

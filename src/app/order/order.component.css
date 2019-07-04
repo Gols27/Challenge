@@ -1,0 +1,13 @@
+.section-table {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pizza-add-btn {
+    color: lightgreen !important;
+    border-color: lightgreen !important;
+}
+
+input.ng-invalid.ng-touched {
+    border-color: red;
+}

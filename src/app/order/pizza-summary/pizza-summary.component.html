@@ -1,0 +1,12 @@
+<div class="border-bottom" *ngIf="pizzaSelected">
+  <div class="price-summary section-table">
+    <div class="section-left" *ngIf="pizzaSelected">{{pizzaSelected.name}}</div>
+    <div class="section-right" *ngIf="pizzaSelected">{{pizzaSelected.price}}</div>
+  </div>
+  <div  class="" *ngIf="pizzaSelected && pizzaSelected.toppings && pizzaSelected.toppings.length != 0">
+      <div *ngFor="let topping of pizzaSelected.toppingList; let tIndex = index;" class="section-table">
+        <div class="section-left">{{topping.name}}</div>
+        <div class="section-right">{{topping.price}}</div>
+      </div>
+  </div>
+</div>

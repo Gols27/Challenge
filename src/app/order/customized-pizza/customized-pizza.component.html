@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        Choose Size
+      </div>
+      <div class="col-12">
+          <div class="btn-group">
+              <label class="btn btn-primary"
+                     btnRadio="Left" tabindex="0" role="button" (click)="sizeSelected('L')">Large</label>
+              <label class="btn btn-primary"
+                     btnRadio="Middle" tabindex="0" role="button" (click)="sizeSelected('M')">Medium</label>
+              <label class="btn btn-primary"
+                     btnRadio="Right" tabindex="0" role="button" (click)="sizeSelected('S')">Small</label>
+          </div>
+      </div>
+      <div class="col-12"  *ngIf="pizza.size">
+          Pick Toppings
+      </div>
+      <div class="col-12" *ngIf="pizza.size">
+          <div class="row">
+            <div class="col-6 col-sm-6 col-md-3">
+                    <input id="topping1" type="checkbox" (click)="toppingSelected(pIndex, 'Bacon')"><label for="topping1">Bacon</label>
+            </div>
+            <div class="col-6 col-sm-6  col-md-3">
+                    <input id="topping2" type="checkbox" (click)="toppingSelected(pIndex, 'Pepperoni')"><label for="topping2">Pepperoni</label>
+            </div>
+            <div class="col-6 col-sm-6  col-md-3">
+                    <input id="topping3" type="checkbox" (click)="toppingSelected(pIndex, 'Mushroom')"><label for="topping3">Mushroom</label>
+            </div>
+            <div class="col-6 col-sm-6  col-md-3">
+                    <input id="topping4" type="checkbox" (click)="toppingSelected(pIndex, 'Olive')"><label for="topping4">Olive</label>
+            </div>
+            <div class="col-6 col-sm-6  col-md-3">
+                    <input id="topping5" type="checkbox" (click)="toppingSelected(pIndex, 'Basil')"><label for="topping5">Basil</label>
+            </div>
+            <div class="col-6 col-sm-6  col-md-3">
+                    <input id="topping6" type="checkbox" (click)="toppingSelected(pIndex, 'Sweetcorn')"><label for="topping6">Sweetcorn</label>
+            </div>
+            <div class="col-6 col-sm-6  col-md-3">
+                    <input id="topping6" type="checkbox" (click)="toppingSelected(pIndex, 'Onion')"><label for="topping6">Onion</label>
+            </div>
+            <div class="col-6 col-sm-6  col-md-3">
+                    <input id="topping6" type="checkbox" (click)="toppingSelected(pIndex, 'Tomato')"> <label for="topping6">Tomato</label>
+            </div>
+          </div>
+    </div>
+  </div>
+  <hr>

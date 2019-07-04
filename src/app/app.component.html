@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div class="banner"></div>
+  <div class="pizza-m-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="pizza-logo" state-a="◔"></div>
+          <div class="pizza-heading"><b>PIZZA </b>Manager</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<div class="container content">
+  <div class="row">
+    <div class='col-sm-4 col-md-2 d-none d-sm-block'>
+        <tabset type="pills" [vertical]="true">
+          <tab *ngFor="let tabz of tabs"
+                [heading]="tabz.title"
+                [active]="tabz.active"
+                (selectTab)="onSelectTab(tabz)">
+          </tab>
+        </tabset>
+    </div>
+    <div class='col-12 d-block d-sm-none'>
+        <tabset type="pills" [vertical]="false">
+          <tab *ngFor="let tabz of tabs"
+                [heading]="tabz.title"
+                [active]="tabz.active"
+                (selectTab)="onSelectTab(tabz)">
+          </tab>
+        </tabset>
+    </div>
+    <div class="col-12 col-sm-8 col-md-10">
+      <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <ul class="nav navbar">
+  <li>
+    <h2 routerLink="dashboard"><button>dashboard</button></h2>
+  </li>
+  <li>
+    <h2 routerLink="order"><button >order</button></h2>
+  </li>
+  <li>
+    <h2 routerLink="ordermanagement"><button >order Management</button></h2>
+  </li>
+</ul> -->
+
+
+

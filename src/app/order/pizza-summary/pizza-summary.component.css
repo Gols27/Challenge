@@ -1,0 +1,9 @@
+.section-table {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.border-bottom {
+    border-bottom: 1px dashed #ccc;
+}

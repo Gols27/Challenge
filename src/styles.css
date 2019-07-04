@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+
+.banner {
+    position: absolute;
+    height: 350px;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 55%, rgba(0,212,255,1) 100%);
+
+}
+a.nav-link.active {
+    border-left: 1px solid #fff;
+    background-color: transparent !important;
+    border-radius: 0;
+}
+.content {
+    position: relative;
+}
+.main-content {
+    position:relative;
+    z-index: 100;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    min-height: 550px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    padding: 20px
+}
+.pizza-logo{
+    transform:rotate(45deg);
+    width:100px;
+    height:100px;
+    color:white;
+    font-size: 75px;
+    margin-left: 10px;
+    position:relative;
+    display:inline-block;
+}
+.pizza-logo:before{
+    transition: all 3s ease-in-out;
+    content:attr(state-a);
+}
+.pizza-m-header {
+    text-align: left;
+}
+.pizza-heading {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 95px;
+    top: 20px;
+    width: 80px;
+    font-size: 24px;
+    line-height: 23px;
+}
+.pizza-heading b {
+    font-family: cooper black;
+}
+.section-main {
+    padding:1rem;
+}
+.row.section-sub-heading-main {
+    padding: 1rem 0;
+}
+.section-subtype {
+    margin-bottom: 1rem;
+}
+.bold-type {
+    font-weight: bold;
+}
+.section-sub-heading {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    padding-bottom: 4px;
+}
+.left-section {
+    float:left;
+    display:block;
+}
+.right-section {
+    float:right;
+    display: block;
+}
+
+.floatRight {
+    text-align-last: right;
+}
+
+input[type="radio"], input[type="checkbox"], button:not(:nth-child(1)) {
+    margin-left: 10px;
+}
+
+/* .cellClassCss {
+
+} */
+.cellClassCss .accept {
+    color: lightseagreen !important;
+    padding-right: 10px;
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ccc;
+}
+.marginTopBottom32 {
+    margin: 2rem 0;
+}
+#delivery__status{
+    border-right: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+  }
+#status_delivery {
+    align-self: center;
+    text-align: center;
+}
+  #total__sales {
+    align-self: center;
+    text-align: center;
+  }
+.cellClassCss .reject {
+    color: red !important;
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.cellClassCss .markComplete {
+color: lightskyblue !important;
+padding-left: 15px;
+cursor: pointer;
+    text-decoration: underline !important;
+}
+.no-padding {
+    padding: 0;
+}
+.legends > div {
+    display: inline-block;
+    margin-right: 15px;
+}
+.center-align {
+    text-align: center;
+}
+.go-to-right {
+    text-align: right;
+}
+.circle {
+    font-size: 30px;
+    line-height: 12px;
+    font-size: 30px;
+}
+.complete-circle {
+ color: green;
+}
+.pending-circle {
+    color: blue;
+}
+.cancel-circle {
+    color: red;
+}
+
+.btn-primary {
+    color: #0069d9 !important;
+    background-color: transparent !important;
+}

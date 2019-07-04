@@ -1,0 +1,94 @@
+<div class="section-main" id="order-page">
+  <div class="container">
+    <div class="row section-heading-main">
+      <div class="col-12">
+        <div class="section-heading bold-type">PIZZA ORDER</div>
+      </div>
+    </div>
+    <div class="row section-sub-heading-main">
+        <div class="col-12">
+          <div class="section-sub-heading">
+            <div>Basic Information</div>
+          </div>
+        </div>
+    </div>
+    <form [formGroup]='placeOrderForm' >
+    <div class="row section-subtype">
+      <div class="col-sm-12 col-md-6">
+        <div class="section-subtype">
+          <div>Name</div>
+          <div class="form-group"><input type="text" formControlName="name" /></div>
+          <span *ngIf="placeOrderForm.controls['name'].hasError('required')
+            && placeOrderForm.controls['name'].touched" >
+              Name is required
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="section-subtype">
+            <div>E-mail Address</div>
+            <div class="form-group"><input type="email" formControlName="email"/></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="section-subtype">
+            <div>Address</div>
+            <div class="form-group"><input type="text" formControlName="address"/></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="section-subtype">
+          <div>Contact Number</div>
+          <div class="form-group"><input type="number" formControlName="contactNum"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="row section-sub-heading-main">
+        <div class="col-12">
+          <div class="section-sub-heading">
+            <div class="left-section">Choose your pizza</div>
+            <div class="right-section">
+              <button class="btn btn-primary pizza-add-btn" (click)="addPizza()">Add Pizza</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row section-subtype">
+      <div class="col-12">
+        <div class="section-subtype">
+          <div *ngFor="let pizza of pizzaList; let pIndex = index;">
+              <app-customized-pizza [pizza]="pizza" [pIndex]="pIndex" (pizzaCustomized)="pizzaChanged($event)"></app-customized-pizza>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row section-sub-heading-main">
+        <div class="col-12">
+          <div class="section-sub-heading">
+            <div>Summary</div>
+          </div>
+        </div>
+    </div>
+    <div class="row section-subtype">
+      <div class="col-12">
+        <div class="section-subtype">
+          <div *ngFor="let pizza of pizzaList; let pIndex = index;">
+            <app-pizza-summary [pizza]="pizza" [pIndex]="pIndex" ></app-pizza-summary>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row section-subtype">
+      <div class="col-12 section-table">
+        <div><h4>Total</h4> </div><div><h4> {{totalCost | number : '1.2-2'}}</h4></div>
+      </div>
+    </div>
+
+    <div class="row section-subtype">
+        <div class="col-12 floatRight">
+          <div><button class="btn btn-primary" (click)="placeOrder(placeOrderForm)">Place Order</button></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

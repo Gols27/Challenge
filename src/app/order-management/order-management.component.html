@@ -1,0 +1,50 @@
+<div class="container alignDiv">
+  <div class="col-6">
+    <div class="row">
+      <div class="col-12">
+        <h6>Total items in inventory</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h6>{{ gridOptions.rowData.length }} items</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-status-bar [statusList]="itemStatusList"></app-status-bar>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-6 floatRight">
+    <div class="col-12"><button disabled class="btn btn-primary">Print Summary</button></div>
+  </div>
+</div>
+<hr />
+<div class="container alignDiv">
+  <div class="row col-8">
+
+    <div class="col-4 alignDiv">
+      <div class="completeCircle circleDot col-1"></div><div class="col-11"><h6 ><label>Completed</label></h6>
+      <h6>{{completedOrderNumber}}</h6></div>
+    </div>
+    <div class="col-4 alignDiv">
+        <div class="pendingCircle circleDot col-1"></div><div class="col-11"><h6 >Pending</h6>
+      <h6>{{pendingOrderNumber}}</h6></div>
+    </div>
+    <div class="col-4 alignDiv">
+        <div class="cancelledCircle circleDot col-1"></div><div class="col-11"><h6 >Cancelled</h6>
+      <h6>{{cancelledOrderNumber}}</h6></div>
+    </div>
+
+  </div>
+
+</div>
+<br />
+<div>
+  <ag-grid-angular id="agGrid" style="width: auto; height: 500px;" class="ag-theme-balham" [gridOptions]="gridOptions"
+    (cellClicked)="onCellClicked($event,$index)">
+  </ag-grid-angular>
+</div>

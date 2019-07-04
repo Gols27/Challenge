@@ -1,0 +1,5 @@
+<div class="status-bar">
+    <div class="status-item" *ngFor="let status of statusList" [style.width.%]="status.value"
+    [ngStyle]="{'background-color': status.color}">
+</div>
+</div>

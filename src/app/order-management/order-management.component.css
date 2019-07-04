@@ -1,0 +1,22 @@
+.alignDiv {
+    display: flex;
+}
+
+
+.circleDot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.completeCircle {
+    background-color: lightgreen;
+}
+
+.pendingCircle {
+    background-color: lightskyblue;
+}
+
+.cancelledCircle {
+    background-color: red;
+}
